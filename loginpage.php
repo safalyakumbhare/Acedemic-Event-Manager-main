@@ -22,7 +22,6 @@ include ("connection.php")
                         <option value="Principal">Principal</option>
                         <option value="HOD">HOD</option>
                         <option value="Faculty">Faculty</option>
-                        <option value="Volenteer">Volenteer</option>
                     </select>
                 </div>
                 <div class="form-group">

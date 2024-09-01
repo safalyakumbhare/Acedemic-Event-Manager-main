@@ -1,5 +1,5 @@
 <?php
-include ("header.php");
+include("header.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,7 @@ include ("header.php");
                 <?php
                 // Display a dropdown with activities
                 
-                $sql = "SELECT dept FROM login WHERE `desig`='Hod'";
+                $sql = "SELECT dept FROM login WHERE `desig`='Hod' OR `desig`='Principal'";
                 echo "<select name='organizer' required>";
                 echo "<option value=''>Select</option>";
                 foreach ($conn->query($sql) as $row) {
