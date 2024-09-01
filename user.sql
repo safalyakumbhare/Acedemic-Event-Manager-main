@@ -64,3 +64,17 @@ CREATE TABLE IF NOT EXISTS `participants`(
     `phone` VARCHAR(30),
     `eventname` VARCHAR(30)
 );
+
+
+CREATE TABLE IF NOT EXISTS `student`(
+    `name` VARCHAR(30),
+    `email` VARCHAR(30),
+    `phone` VARCHAR(10),
+    `dept` VARCHAR(30),
+    `branch` VARCHAR(30),
+    `year` VARCHAR(5),
+    `rollno` VARCHAR(10),
+    `password` VARCHAR(20),
+    `approval` VARCHAR(20)
+);
+

@@ -16,22 +16,40 @@
   <div class="container">
     <h1 class="title">Student Registration</h1>
     <form class="registration-form" action="Add-Student.php" method="POST">
-      <label for="hodName">Name of Student:</label>
-      <input type="text" id="Name" name="Name" required>
+      <label for="studName">Name of Student :</label>
+      <input type="text" id="Name" name="name" required>
 
       <label for="email">Email : </label>
-      <input type="text" id="email" name="email" required>
+      <input type="email" id="email" name="email" required>
 
-      <label for="department">Department:</label>
+      <label for="phone">Phone : </label>
+      <input type="number" id="phone" name="phone" required>
+
+      <label for="department">Department :</label>
       <input type="text" id="department" name="department" required>
 
-      <label for="userId">Student ID:</label>
-      <input type="text" id="userId" name="userId" required>
+      <label for="branch">Branch :</label>
+      <input type="text" id="branch" name="branch" required>
 
-      <label for="password">Password:</label>
+      <label for="department">Year :</label>
+      <select name="year" id="year">
+        <option value="" selected>Select your year</option>
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+        <option value="3rd">3rd</option>
+        <option value="4rt">4rt</option>
+      </select>
+
+      <label for="roll">Roll no :</label>
+      <input type="text" id="roll" name="roll" required>
+  
+      <label for="password">Password :</label>
       <input type="password" id="password" name="password" required>
 
-      <input type="submit" name="send" value="Register">
+      <label for="confirmpassword">Confirm Password :</label>
+      <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+      <input type="submit" name="register" value="Register">
       <button type="button" class="cancel-button" name="cancel">Cancel</button>
     </form>
   </div>
