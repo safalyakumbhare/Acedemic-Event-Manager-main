@@ -7,7 +7,11 @@ CREATE TABLE IF NOT EXISTS `login`(
     `password` VARCHAR(30)
 );
 
-INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Principle','Safalya Kumbhare','Ghriet','admin', 'admin111');
+INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Principle','Safalya Kumbhare','safalyakumbhare@gmail.com','Ghriet','admin', 'admin111');
+INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Hod','Pravin Paradkar','pravindparadkar2003@gmail.com
+','Commerce and Management','pravin', 'pravin11');
+INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Faculty','Dhananjay',
+'dhankawale2003@gmail.com','Commerce and Management','dhananjay', 'dhan');
 
 CREATE TABLE  IF NOT EXISTS `activity` (
     `name` VARCHAR(30),
