@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.registration-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.registration-form label {
+  display: block;
+  width: 48%;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.registration-form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.registration-form input[type="submit"] {
+  display: block;
+  width: 48%;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  margin-top: 1.5vh;
+}
+
+.registration-form input[type="submit"]:hover {
+  color: dodgerblue;
+  background-color: #fff;
+  box-shadow: 1px 1px 20px 10px dodgerblue;
+}
+
+.registration-form button[type="button"].cancel-button {
+  display: block;
+  width: 48%;
+  background-color: #ea2a2a;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.registration-form button[type="button"].cancel-button:hover {
+  background-color: #fff;
+  color: #ea2a2a;
+  box-shadow: 1px 1px 20px 10px #ea2a2a;
+}
+
+.title {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-left: 30px;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+
+
+
