@@ -46,7 +46,7 @@ include("header.php");
                 
                 $sql = "SELECT dept FROM login WHERE `desig`='Hod' OR `desig`='Principal'";
                 echo "<select name='organizer' required>";
-                echo "<option value=''>Select</option>";
+                echo "<option value='' selected>Select</option>";
                 foreach ($conn->query($sql) as $row) {
                     echo "<option value='{$row['dept']}'>{$row['dept']}</option>";
                 }

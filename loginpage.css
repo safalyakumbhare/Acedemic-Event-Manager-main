@@ -178,3 +178,26 @@ h2 {
   cursor: pointer; /* Change cursor to pointer on hover */
   font-size: 1.2em; /* Adjust the icon size */
 }
+
+
+a{
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top:15px;
+  border-radius: 10px;
+  text-decoration: none;
+  z-index: 1;
+  right:55px;
+  height: 50px;
+  width: 150px;
+  backdrop-filter: blur(15px);
+  transition: all ease .5s;
+}
+
+a:hover{
+  background-color: #fff;
+  color: black;
+}

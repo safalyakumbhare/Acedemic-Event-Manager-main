@@ -1,6 +1,6 @@
 <?php
-include ("connection.php")
-?>
+include("connection.php")
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,13 @@ include ("connection.php")
 </head>
 
 <body>
+    <a href="student-loginpage.php">
+        <h3>Student Login</h3>
+    </a>
+
     <div class="page">
+
+
         <div class="login-container">
             <!-- <h2>Event Manager</h2> -->
             <form id="login-form" action="login.php" name="form" method="POST">

@@ -12,6 +12,9 @@ INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUE
 ','Commerce and Management','pravin', 'pravin11');
 INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Faculty','Dhananjay',
 'dhankawale2003@gmail.com','Commerce and Management','dhananjay', 'dhan');
+INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Hod','Sandhya','sandhya@gmail.com','Science and Technology','sandhya','sandhya11');
+INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Faculty','Divyani Lokhande','divyanilok@gmail.com','Science and Technology','divyani','divyani11');
+
 
 CREATE TABLE  IF NOT EXISTS `activity` (
     `name` VARCHAR(30),
@@ -23,6 +26,14 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `orgby` VARCHAR(30),
     `approval` VARCHAR(50)
 );
+
+INSERT INTO `activity` (`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`) VALUES ('Ganesh Utsav','10 day Ganesh Chaturthi Festival in campus','2024-09-07','2024-09-17','Academic Building','11:00:00','Ghriet','Approved by Principal');
+INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`) VALUES 
+('Ganesh Idol Making Competition','Inter-Department Ganesh Idol Making Competition','2024-09-04','2024-09-05','Poly Building','10:30:00','Commerce and Management','Approved by Principal');
+INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`) VALUES 
+('FIESTA 2024','Freshers Party of BCA Department','2024-09-09','2024-09-09','Solitare Banqueet , Hingna T-Point , Nagpur','10:15:00','Science and Technology','Approved by Principal');
+
+
 
 CREATE TABLE IF NOT EXISTS `requirement`(
     `eventname`  VARCHAR(30),
