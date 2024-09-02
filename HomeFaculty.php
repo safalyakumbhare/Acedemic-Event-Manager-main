@@ -20,6 +20,9 @@ $rjtcount = mysqli_num_rows($rjt);
 $sql = "SELECT name FROM `activity` WHERE `datefrom` = '$current_date' AND `approval`='Approved by Principal'";
 $res = mysqli_query($conn, $sql);
 
+
+$stud = mysqli_query($conn,"SELECT * FROM `student` WHERE `approval` = 'Pending'");
+$studcount = mysqli_num_rows($stud);
 // Check if there are any events
 $num_events = mysqli_num_rows($res);
 $data = mysqli_fetch_assoc($res);
@@ -101,8 +104,8 @@ $data = mysqli_fetch_assoc($res);
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Approve Students</h2>
-            <p>Give approval to students to login</p>
+            <h2>Approve Students : <?php echo $studcount;?></h2>
+            <p>Approve Login Request from Students</p>
 
           </div>
         </div>

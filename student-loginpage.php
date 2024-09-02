@@ -15,7 +15,7 @@
     <div class="main">
         <div class="login-container">
             <!-- <h2>Event Manager</h2> -->
-            <form id="login-form" action="student-login.php" name="form" method="POST">
+            <form id="login-form" action="login.php" name="form" method="POST">
                 <div class="form-group">
                     <label for="user">Student ID : </label>
                     <input type="text" id="user" name="name" required>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button type="submit" class="btn login" id="btn" name="submit">Login</button>
+                    <button type="submit" class="btn login" id="btn" name="login">Login</button>
                     <button type="reset" class="btn reset" name="reset" id="btn">Reset</button>
                 </div>
                 <div class="form-group">
