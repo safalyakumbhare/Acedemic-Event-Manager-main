@@ -97,6 +97,18 @@ $data = mysqli_fetch_assoc($res);
       </a>
     </button>
     <button class="bttn">
+      <a href="student-request.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Approve Students</h2>
+            <p>Give approval to students to login</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
+    <button class="bttn">
       <a href="Eventdetail.php">
         <div class="box hover-box" id="new-faculty">
           <div class="content">

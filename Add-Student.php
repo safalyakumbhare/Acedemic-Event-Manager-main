@@ -25,7 +25,7 @@ if (isset($_POST['register'])) {
 
         if ($result == 1) {
             echo "<script>alert('Your Registration Request has been sent. Please login after 24 hours');
-            window.location.href='student-registration.php';</script>";
+            window.location.href='student-loginpage.php';</script>";
         } else {
             echo "<script>alert('Registration failed');
                 window.location.href='student-registration.php';</script>";

@@ -14,7 +14,7 @@ if($conn->multi_query($sql) === True)
             </script>";
 }
 else{
-    echo "Error deleting record".$conn->error;
+    echo "<script>alert('Error deleting record')</script>";
 }
 $conn->close();
 
