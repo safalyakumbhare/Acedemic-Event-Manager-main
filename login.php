@@ -57,13 +57,11 @@ if (isset($_POST['login'])) {
     $pass = $_POST['pass'];
     $_SESSION['name'] = $name;
 
-    // Use prepared statements to prevent SQL injection
     $stmt = $conn->prepare("SELECT `approval` FROM `student` WHERE `name` = ? AND `password` = ?");
     $stmt->bind_param("ss", $name, $pass);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Check if the user exists and fetch the approval status
     if ($row = $result->fetch_assoc()) {
         $approval = $row['approval'];
 
@@ -74,13 +72,11 @@ if (isset($_POST['login'])) {
             echo '<script>alert("Your account has been rejected for approval to login");
         window.location.href="student-loginpage.php";</script>';
         } elseif ($approval == "Approved") {
-            // Successful login, redirect to Home-Student.php
             header("Location: Home-Student.php");
-            exit(); // Ensure no further code is executed after redirection
+            exit(); 
         }
     } else {
-        // No matching student found, incorrect name or password
-        echo '<script>alert("Incorrect Student Name or Password");
+        echo '<script>alert("Invalid Student Name or Password");
     window.location.href="student-loginpage.php";</script>';
     }
 

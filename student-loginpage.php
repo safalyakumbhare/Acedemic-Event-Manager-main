@@ -17,7 +17,7 @@
             <!-- <h2>Event Manager</h2> -->
             <form id="login-form" action="login.php" name="form" method="POST">
                 <div class="form-group">
-                    <label for="user">Student ID : </label>
+                    <label for="user">Student Name : </label>
                     <input type="text" id="user" name="name" required>
                 </div>
                 <div class="form-group">
