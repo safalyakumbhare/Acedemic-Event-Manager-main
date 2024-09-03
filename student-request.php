@@ -42,6 +42,9 @@ include("header.php")
         .delete {
             color: blue;
         }
+        .remove{
+            color:red;
+        }
     </style>
 </head>
 
@@ -80,6 +83,10 @@ include("header.php")
                             <td>"
 
                     . '<a class="delete" href="student-approve.php?name=' . $row["name"] . '">Approve</a> '
+                    . "</td>;
+                            <td>"
+
+                    . '<a class="remove" href="student-reject.php?name=' . $row["name"] . '">Reject</a> '
                     . "</td>;
                         </tr>";
             }

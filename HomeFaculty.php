@@ -1,6 +1,6 @@
 <?php
-include ("header.php");
-include ("connection.php");
+include("header.php");
+include("connection.php");
 $current_date = date('Y-m-d');
 $pending = mysqli_query($conn, "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND  `approval`='Pending' ");
 $pendcount = mysqli_num_rows($pending);
@@ -21,7 +21,7 @@ $sql = "SELECT name FROM `activity` WHERE `datefrom` = '$current_date' AND `appr
 $res = mysqli_query($conn, $sql);
 
 
-$stud = mysqli_query($conn,"SELECT * FROM `student` WHERE `approval` = 'Pending'");
+$stud = mysqli_query($conn, "SELECT * FROM `student` WHERE `approval` = 'Pending'");
 $studcount = mysqli_num_rows($stud);
 // Check if there are any events
 $num_events = mysqli_num_rows($res);
@@ -73,8 +73,8 @@ $data = mysqli_fetch_assoc($res);
       </a>
     </button>
 
-    
-    
+
+
     <button class="bttn">
       <a href="ShowEvent.php">
         <div class="box hover-box" id="new-faculty">
@@ -104,13 +104,27 @@ $data = mysqli_fetch_assoc($res);
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Approve Students : <?php echo $studcount;?></h2>
+            <h2>Approve Students : <?php echo $studcount; ?></h2>
             <p>Approve Login Request from Students</p>
 
           </div>
         </div>
       </a>
     </button>
+
+    <button class="bttn">
+      <a href="student-report.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Student Report</h2>
+            <p>Student Data Report</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
+
     <button class="bttn">
       <a href="Eventdetail.php">
         <div class="box hover-box" id="new-faculty">

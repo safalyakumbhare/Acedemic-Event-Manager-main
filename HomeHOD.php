@@ -59,6 +59,18 @@ $data = mysqli_fetch_assoc($res);
         </div>
       </a>
     </button>
+    <button class="bttn">
+      <a href="student-report.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Student Report</h2>
+            <p>Student Data Report</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
 
     <button class="bttn">
       <a href="Event Report.php">

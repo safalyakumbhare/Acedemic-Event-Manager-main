@@ -1,5 +1,5 @@
 <?php
-include ("header.php");
+include("header.php");
 $current_date = date('Y-m-d');
 $sql = "SELECT name FROM `activity` WHERE `datefrom` = '$current_date' AND `approval`='Approved by Principal'";
 $res = mysqli_query($conn, $sql);
@@ -23,18 +23,18 @@ $pendcount = mysqli_num_rows($pending);
 </head>
 
 <body>
-<center>
-      <h1>
-        <?php
-        if ($num_events > 0) {
-          echo '<img id="img" src="image/image1.png">Event Today : '. htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8').'<img id="img" src="image/image1.png">';
+  <center>
+    <h1>
+      <?php
+      if ($num_events > 0) {
+        echo '<img id="img" src="image/image1.png">Event Today : ' . htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8') . '<img id="img" src="image/image1.png">';
 
-        } else {
-          echo 'No Events Today';
-        }
-        ?>
-      </h1>
-    </center>
+      } else {
+        echo 'No Events Today';
+      }
+      ?>
+    </h1>
+  </center>
   <div class="container">
 
     <button class="bttn">
@@ -69,7 +69,7 @@ $pendcount = mysqli_num_rows($pending);
         <div class="box hover-box" id="new-faculty">
           <div class="content">
 
-            <h2>Approve Event : <?php  echo $pendcount;?> </h2>
+            <h2>Approve Event : <?php echo $pendcount; ?> </h2>
             <p>Approve Requested Events</p>
 
           </div>
@@ -88,7 +88,19 @@ $pendcount = mysqli_num_rows($pending);
         </div>
       </a>
     </button>
-    
+
+    <button class="bttn">
+      <a href="student-report.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Student Report</h2>
+            <p>Student Data Report</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
     <button class="bttn">
       <a href="ShowEvent.php">
         <div class="box hover-box" id="new-faculty">

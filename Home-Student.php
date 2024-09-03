@@ -1,3 +1,6 @@
+<?php
+    include("header-student.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -8,7 +8,7 @@ include("header.php")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Participants</title>
+    <title>Students Report</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,7 +21,7 @@ include("header.php")
         }
 
         table {
-            width: 80%;
+            width: 90%;
             /* border-collapse: ; */
             margin: 20px auto;
             background-color: white;
@@ -40,40 +40,54 @@ include("header.php")
         }
 
         .delete {
-            color: blue;
+            color: red;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Partcipants List</h1>
+    <h1>Students Report</h1>
     <table>
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Student Name</th>
                 <th>Email</th>
-                <th>Department</th>
-                <th>Year</th>
                 <th>Phone</th>
-                <th>Event</th>
+                <th>Department</th>
+                <th>Branch</th>
+                <th>Year</th>
+                <th>Roll no</th>
+                <th>Password</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $sql = "SELECT * FROM `participants`";
+            $sql = "SELECT * FROM `student` WHERE `approval` = 'Approved'";
+
             $result = mysqli_query($conn, $sql);
+
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
-                <td>" . $row["name"] . "</td>
-                <td>" . $row["email"] . "</td>
-                <td>" . $row["dept"] . "</td>
-                <td>" . $row["Year"] . "</td>
-                <td>" . $row["phone"] . "</td>
-                <td>" . $row["eventname"] . "</td>
-                
-            </tr>";
-            } ?>
+                            <td>" . $row["name"] . "</td>
+                            <td>" . $row["email"] . "</td>
+                            <td>" . $row["phone"] . "</td>
+                            <td>" . $row["dept"] . "</td>
+                            <td>" . $row["branch"] . "</td>
+                            <td>" . $row["year"] . "</td>
+                            <td>" . $row["rollno"] . "</td>
+                            <td>" . $row["password"] . "</td>
+                            <td>"
+
+                    . '<a class="delete" href="student-remove.php?name=' . $row["name"] . '">Remove</a> '
+                    . "</td>";
+                            
+
+
+            }
+
+
+            ?>
         </tbody>
     </table>
 </body>
