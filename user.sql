@@ -54,7 +54,7 @@ INSERT INTO `requirement` (`eventname`,`ground`,`sport`,`auditorium`,`sound`,`ph
 
 CREATE TABLE IF NOT EXISTS `budget`(
     `eventname` VARCHAR(30),
-    `particular`  VARCHAR(30),
+    `particular`  VARCHAR(50),
     `amount` DECIMAL,
     `qty`  INT,
     `total` DECIMAL
@@ -89,3 +89,9 @@ CREATE TABLE IF NOT EXISTS `student`(
     `approval` VARCHAR(20)
 );
 
+INSERT INTO `student` VALUES 
+('Rohan Desai','rohan@gmail.com','9632144560','Science and Technology','B-Tech','3rd','53','rohan123','Approved');
+INSERT INTO `student` VALUES
+('Rahul Desai','rahul@gmail.com','8050234753','Science and Technology','BCA','2nd','49','rahul','Approved');
+INSERT INTO `student` VALUES
+('Nisha Khole','nishak@gmail.com','9830342949','Commerce and Management','BCCA','1st','38','nisha','Approved');

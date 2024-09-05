@@ -61,7 +61,7 @@ include ("connection.php");
             $budget_query = "SELECT * FROM budget WHERE eventname = '$ename'";
             $budget_res = $conn->query($budget_query);
         } else {
-            echo "Error fetching requirement data: " . $conn->error;
+            echo "<script>alert('Error fetching requirement data');</script>";
         }
     }
 

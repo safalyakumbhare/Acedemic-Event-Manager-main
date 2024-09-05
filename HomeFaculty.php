@@ -19,13 +19,13 @@ $rjtcount = mysqli_num_rows($rjt);
 // Modify the SQL query to select only events with a starting date greater than or equal to the current date
 $sql = "SELECT name FROM `activity` WHERE `datefrom` = '$current_date' AND `approval`='Approved by Principal'";
 $res = mysqli_query($conn, $sql);
-
-
-$stud = mysqli_query($conn, "SELECT * FROM `student` WHERE `approval` = 'Pending'");
-$studcount = mysqli_num_rows($stud);
 // Check if there are any events
 $num_events = mysqli_num_rows($res);
 $data = mysqli_fetch_assoc($res);
+
+$stud = mysqli_query($conn, "SELECT * FROM `student` WHERE `approval` = 'Pending'");
+$studcount = mysqli_num_rows($stud);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
