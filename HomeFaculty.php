@@ -73,7 +73,30 @@ $studcount = mysqli_num_rows($stud);
       </a>
     </button>
 
+    <button class="bttn">
+      <a href="student-request.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
 
+            <h2>Approve Students : <?php echo $studcount; ?></h2>
+            <p>Approve Login Request from Students</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
+    <button class="bttn">
+      <a href="participant-report.php">
+        <div class="box hover-box" id="new-faculty">
+          <div class="content">
+
+            <h2>Participants Report</h2>
+            <p>Show Participants of Events</p>
+
+          </div>
+        </div>
+      </a>
+    </button>
 
     <button class="bttn">
       <a href="ShowEvent.php">
@@ -99,18 +122,7 @@ $studcount = mysqli_num_rows($stud);
         </div>
       </a>
     </button>
-    <button class="bttn">
-      <a href="student-request.php">
-        <div class="box hover-box" id="new-faculty">
-          <div class="content">
-
-            <h2>Approve Students : <?php echo $studcount; ?></h2>
-            <p>Approve Login Request from Students</p>
-
-          </div>
-        </div>
-      </a>
-    </button>
+    
 
     <button class="bttn">
       <a href="student-report.php">

@@ -5,6 +5,13 @@ include("login.php");
 $user = $_SESSION['name'];
 $eventname = $_GET['event'];
 
+$eventdata = "SELECT * FROM `activity` WHERE `name` = '$eventname'";
+$eventdata_res = mysqli_query($conn,$eventdata);
+$eventdata_row = mysqli_fetch_assoc($eventdata_res);
+$date = $eventdata_row['dateto'];
+
+
+
 // Fetch student data from database
 $studdata = "SELECT * FROM `student` WHERE `name` = '$user'";
 $result = mysqli_query($conn, $studdata);
@@ -28,7 +35,7 @@ if (mysqli_num_rows($check_result) > 0) {
 } else {
     // Insert new participation entry
     $sql = "INSERT INTO `participants` 
-            VALUES ('$eventname', '$studname', '$studroll', '$studdept', '$studbranch', '$studyear', '$studemail', '$studphone', 'participated')";
+            VALUES ('$eventname', '$studname', '$studroll', '$studdept', '$studbranch', '$studyear', '$studemail', '$studphone', 'participated','$date')";
 
     $result = mysqli_query($conn, $sql);
 
