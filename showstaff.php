@@ -12,7 +12,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <td>" . $row["password"] . "</td>
                 <td>"
 
-        . '<a class="delete" href="deleteEvent.php?username=' . $row['username'] . '">Remove</a> '
+        . '<a class="delete" href="Remove-staff.php?username=' . $row['username'] . '">Remove</a> '
         . "</td>;
             </tr>";
 }

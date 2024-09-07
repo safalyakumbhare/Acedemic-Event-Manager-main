@@ -35,7 +35,7 @@ $name = $res;
 <body>
     <nav class="navbar navbar-dark bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Acedemic Event Manager</a>
+            <a class="navbar-brand" href="index.php">Acedemic Event Manager</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">

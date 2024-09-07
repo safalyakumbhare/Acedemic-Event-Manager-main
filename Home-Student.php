@@ -8,6 +8,8 @@ $res = mysqli_query($conn, $sql);
 
 $num_events = mysqli_num_rows($res);
 // $data = mysqli_fetch_assoc($res);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +69,7 @@ $num_events = mysqli_num_rows($res);
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Time :' . $data['time'] . '</p>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Last date to Participate :' . $dateFormatted1 . '</p>
 
-                                <a href="#" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Participate Now</a>
+                                <a href="student-event-participation.php?event='.$data['name'].'" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Participate</a>
                             </div>
                         </div>
                     </div>

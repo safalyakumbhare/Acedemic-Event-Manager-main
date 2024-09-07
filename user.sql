@@ -24,16 +24,16 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `place` VARCHAR(30),
     `time` TIME,
     `orgby` VARCHAR(30),
-    `approval` VARCHAR(50)
+    `approval` VARCHAR(50),
+    `participation_date` DATE
 );
 
 
-INSERT INTO `activity` (`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`) VALUES ('Ganesh Utsav','10 day Ganesh Chaturthi Festival in campus','2024-09-07','2024-09-17','Academic Building','11:00:00','Ghriet','Approved by Principal');
-INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`) VALUES 
-('Ganesh Idol Making Competition','Inter-Department Ganesh Idol Making Competition','2024-09-04','2024-09-05','Poly Building','10:30:00','Commerce and Management','Approved by Principal');
-INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`) VALUES 
-('FIESTA 2024','Freshers Party of BCA Department','2024-09-09','2024-09-09','Solitare Banqueet , Hingna T-Point , Nagpur','10:15:00','Science and Technology','Approved by Principal');
-
+INSERT INTO `activity` (`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`) VALUES ('Ganesh Utsav','10 day Ganesh Chaturthi Festival in campus','2024-09-07','2024-09-17','Academic Building','11:00:00','Ghriet','Approved by Principal','2024-09-06');
+INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`) VALUES 
+('Ganesh Idol Making Competition','Inter-Department Ganesh Idol Making Competition','2024-09-04','2024-09-05','Poly Building','10:30:00','Commerce and Management','Approved by Principal','2024-09-01');
+INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`) VALUES 
+('FIESTA 2024','Freshers Party of BCA Department','2024-09-09','2024-09-09','Solitare Banqueet , Hingna T-Point , Nagpur','10:15:00','Science and Technology','Approved by Principal','2024-09-08');
 
 
 CREATE TABLE IF NOT EXISTS `requirement`(
@@ -95,3 +95,16 @@ INSERT INTO `student` VALUES
 ('Rahul Desai','rahul@gmail.com','8050234753','Science and Technology','BCA','2nd','49','rahul','Approved');
 INSERT INTO `student` VALUES
 ('Nisha Khole','nishak@gmail.com','9830342949','Commerce and Management','BCCA','1st','38','nisha','Approved');
+
+
+CREATE TABLE IF NOT EXISTS (
+    `eventname` VARCHAR(30),
+    `studname` VARCHAR(30),
+    `studrollno` VARCHAR(10),
+    `studdept` VARCHAR(30),
+    `studbranch` VARCHAR(30),
+    `studyear` VARCHAR(5),
+    `studemail` VARCHAR(30),
+    `studphone` VARCHAR(10),
+);
+
