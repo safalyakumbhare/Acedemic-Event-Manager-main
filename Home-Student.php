@@ -50,6 +50,8 @@ $num_events = mysqli_num_rows($res);
     <?php
     if ($num_events > 0) {
         while ($data = mysqli_fetch_assoc($res)) {
+            $dateFormatted = date('d-m-y', strtotime($data['datefrom']));
+            $dateFormatted1 = date('d-m-y', strtotime($data['participation_date']));
             echo '
     <div class="footer">
         <div class="footer_top">
@@ -58,11 +60,13 @@ $num_events = mysqli_num_rows($res);
                     <div class="col-lg-6 col-md-8">
                         <div class="footer_widget">
                             <div class="address_details text-center">
-                                <h4 class="wow" data-wow-duration="1s" data-wow-delay=".3s">' . $data['datefrom'] . '</h4>
+                                <h4 class="wow" data-wow-duration="1s" data-wow-delay=".3s">' . $dateFormatted . '</h4>
                                 <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">' . $data['name'] . '</h3>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">' . $data['description'] . '</p>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Organized by : ' . $data['orgby'] . '</p>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Time :' . $data['time'] . '</p>
+                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Last date to Participate :' . $dateFormatted1 . '</p>
+
                                 <a href="#" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Participate Now</a>
                             </div>
                         </div>

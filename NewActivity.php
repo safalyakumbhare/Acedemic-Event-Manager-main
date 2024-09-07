@@ -40,6 +40,10 @@ include("header.php");
                 <input type="time" id="time" name="time" required />
             </div>
             <div class="form-group">
+                <label for="participation-date">Last Date of Participation:</label>
+                <input type="date" id="participation-date" name="participation-date" required />
+            </div>
+            <div class="form-group">
                 <label for="organizer">Organized by:</label>
                 <?php
                 // Display a dropdown with activities
