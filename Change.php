@@ -8,11 +8,12 @@ if (isset($_POST['change'])) {
     $newpass = $_POST['newpass'];
     $confirmpass = $_POST['conpass'];
 
-   
+
     if ($newpass !== $confirmpass) {
-        echo "<script>alert('New Password and Confirm Password do not match');</script>";
+        echo "<script>alert('New Password and Confirm Password do not match');
+        window.location.href='ChangePass.php';</script>";
     } else {
-        
+
         $sql = "SELECT * FROM `login` WHERE `username`='$userid' AND `password`='$oldpass'";
         $result = mysqli_query($conn, $sql);
 
@@ -26,10 +27,10 @@ if (isset($_POST['change'])) {
                 window.location.href='Loginpage.php';</script>";
                 // include("loginpage.php");
             } else {
-                echo "<script>alert('Error in updating password');</script>";
+                echo "<script>alert('Error in updating password');window.location.href='ChangePass.php';</script>";
             }
         } else {
-            echo "<script>alert('Incorrect Current Password');</script>";
+            echo "<script>alert('Incorrect Current Password');window.location.href='ChangePass.php';</script>";
         }
     }
 }
