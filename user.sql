@@ -25,15 +25,16 @@ CREATE TABLE  IF NOT EXISTS `activity` (
     `time` TIME,
     `orgby` VARCHAR(30),
     `approval` VARCHAR(50),
-    `participation_date` DATE
+    `participation_date` DATE,
+    `end-time` TIME
 );
 
 
-INSERT INTO `activity` (`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`) VALUES ('Ganesh Utsav','10 day Ganesh Chaturthi Festival in campus','2024-09-07','2024-09-17','Academic Building','11:00:00','Ghriet','Approved by Principal','2024-09-06');
-INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`) VALUES 
-('Ganesh Idol Making Competition','Inter-Department Ganesh Idol Making Competition','2024-09-04','2024-09-05','Poly Building','10:30:00','Commerce and Management','Approved by Principal','2024-09-01');
-INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`) VALUES 
-('FIESTA 2024','Freshers Party of BCA Department','2024-09-09','2024-09-09','Solitare Banqueet , Hingna T-Point , Nagpur','10:15:00','Science and Technology','Approved by Principal','2024-09-08');
+INSERT INTO `activity` (`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`,`end-time`) VALUES ('Ganesh Utsav','10 day Ganesh Chaturthi Festival in campus','2024-09-07','2024-09-17','Academic Building','11:00:00','Ghriet','Approved by Principal','2024-09-06','02:00:00');
+INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`,`end-time`) VALUES 
+('Ganesh Idol Making Competition','Inter-Department Ganesh Idol Making Competition','2024-09-04','2024-09-05','Poly Building','10:30:00','Commerce and Management','Approved by Principal','2024-09-01','02:00:00');
+INSERT INTO `activity`(`name`,`description`,`datefrom`,`dateto`,`place`,`time`,`orgby`,`approval`,`participation_date`,`end-time`) VALUES 
+('FIESTA 2024','Freshers Party of BCA Department','2024-09-09','2024-09-09','Solitare Banqueet , Hingna T-Point , Nagpur','10:15:00','Science and Technology','Approved by Principal','2024-09-08','02:00:00');
 
 
 CREATE TABLE IF NOT EXISTS `requirement`(

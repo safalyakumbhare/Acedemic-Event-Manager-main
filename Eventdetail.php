@@ -18,7 +18,7 @@ include ("connection.php");
     <?php
 
     // Initialize variables
-    $eventname = $des = $startdate = $enddate = $place = $time = $orgby = "";
+    $eventname = $des = $startdate = $enddate = $place = $time = $orgby = $endtime = "";
     $ground_checked = $sportroom_checked = $audi_checked = $sound_checked = $photo_checked = $video_checked = "";
     $budget_res = null;
 
@@ -43,6 +43,8 @@ include ("connection.php");
             $time = $row_event['time'];
             $orgby = $row_event['orgby'];
             $appr = $row_event['approval'];
+            $endtime = $row_event['end-time'];
+            $lastpart = $row_event['participation_date'];
         }
 
         // Fetch requirement data
@@ -126,8 +128,16 @@ include ("connection.php");
             </div>
 
             <div class="form-group">
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" readonly value="<?php echo htmlspecialchars($time); ?>">
+                <label for="starttime">Event Start Time:</label>
+                <input type="time" id="starttime" name="starttime" readonly value="<?php echo htmlspecialchars($time); ?>">
+            </div>
+            <div class="form-group">
+                <label for="endtime">Event End Time:</label>
+                <input type="time" id="endtime" name="endtime" readonly value="<?php echo htmlspecialchars($endtime); ?>">
+            </div>
+            <div class="form-group">
+                <label for="partdate">Last Date for Participation : </label>
+                <input type="date" id="partdate" name="partdate" readonly value="<?php echo htmlspecialchars($lastpart); ?>">
             </div>
 
             <div class="form-group">

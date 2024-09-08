@@ -10,6 +10,7 @@ if (isset($_POST['sendact'])) {
     $time = $_POST['time'];
     $orgby = $_POST['organizer'];
     $participation = $_POST['participation-date'];
+    $endtime = $_POST['endtime'];
     $_SESSION['actname'] =  $actname;
 
     // Convert user input requirements to a list of required values
@@ -46,7 +47,7 @@ if (isset($_POST['sendact'])) {
         include("NewActivity.php");
     } else {
         // Proceed with inserting data into `activity` and `requirement` tables if no conflict
-        $sql_activity = "INSERT INTO `activity` VALUES ('$actname','$actdes','$startdate','$enddate','$place','$time','$orgby','Pending','$participation')";
+        $sql_activity = "INSERT INTO `activity` VALUES ('$actname','$actdes','$startdate','$enddate','$place','$time','$orgby','Pending','$participation','$endtime')";
         $result_activity = mysqli_query($conn, $sql_activity);
 
         // Check if the first query was successful before proceeding

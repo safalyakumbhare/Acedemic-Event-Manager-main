@@ -66,7 +66,7 @@ $num_events = mysqli_num_rows($res);
                                 <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">' . $data['name'] . '</h3>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">' . $data['description'] . '</p>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Organized by : ' . $data['orgby'] . '</p>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Time :' . $data['time'] . '</p>
+                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Timing :' . $data['time'] . ' To '.$data['end-time'].'</p>
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Last date to Participate :' . $dateFormatted1 . '</p>
 
                                 <a href="student-event-participation.php?event='.$data['name'].'" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Participate</a>

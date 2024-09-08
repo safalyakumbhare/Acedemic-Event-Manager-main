@@ -36,8 +36,12 @@ include("header.php");
                 <input type="text" id="place" name="place" required />
             </div>
             <div class="form-group">
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required />
+                <label for="start-time">Event Start Time:</label>
+                <input type="time" id="starttime" name="starttime" required />
+            </div>
+            <div class="form-group">
+                <label for="endtime">Event End Time:</label>
+                <input type="time" id="endtime" name="endtime" required />
             </div>
             <div class="form-group">
                 <label for="participation-date">Last Date of Participation:</label>
