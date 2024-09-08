@@ -68,8 +68,10 @@ $result = mysqli_query($conn, $sql);
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Place</th>
-                <th>Time</th>
+                <th>Event Start Time</th>
+                <th>Event End Time</th>
                 <th>Department</th>
+                <th>Last Date of Participation</th>
                 <th>Approval Status</th>
             </tr>
         </thead>
@@ -82,7 +84,9 @@ $result = mysqli_query($conn, $sql);
                 <td>" . date("d-m-y", strtotime($row["dateto"])) . "</td>
                 <td>" . $row["place"] . "</td>
                 <td>" . $row["time"] . "</td>
+                <td>" . $row["end-time"] . "</td>
                 <td>" . $row["orgby"] . "</td>
+                <td>" . $row["participation_date"] . "</td>
                 <td>" . $row["approval"] . "</td>
             </tr>";
             } ?>

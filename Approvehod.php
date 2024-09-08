@@ -43,6 +43,8 @@ include ("connection.php");
             $place = $row_event['place'];
             $time = $row_event['time'];
             $orgby = $row_event['orgby'];
+            $endtime = $row_event['end-time'];
+            $lastpart = $row_event['participation_date'];
         }
 
         // Fetch requirement data
@@ -149,9 +151,18 @@ include ("connection.php");
             </div>
 
             <div class="form-group">
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" readonly value="<?php echo htmlspecialchars($time); ?>">
+                <label for="starttime">Event Start Time:</label>
+                <input type="time" id="starttime" name="starttime" readonly value="<?php echo htmlspecialchars($time); ?>">
             </div>
+            <div class="form-group">
+                <label for="endtime">Event End Time:</label>
+                <input type="time" id="endtime" name="endtime" readonly value="<?php echo htmlspecialchars($endtime); ?>">
+            </div>
+            <div class="form-group">
+                <label for="partdate">Last Date for Participation : </label>
+                <input type="date" id="partdate" name="partdate" readonly value="<?php echo htmlspecialchars($lastpart); ?>">
+            </div>
+
 
             <div class="form-group">
                 <label for="organizer">Organized by:</label>

@@ -59,32 +59,36 @@ $result = mysqli_query($conn, $sql);
         ?>
     </h1></center>
         <table>
-            <thead>
-                <tr>
-                    <th>Event Name</th>
-                    <th>Event Description</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Place</th>
-                    <th>Time</th>
-                    <th>Department</th>
-                    <th>Approval Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Event Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Place</th>
+                <th>Event Start Time</th>
+                <th>Event End Time</th>
+                <th>Department</th>
+                <th>Last Date of Participation</th>
+                <th>Approval Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>
                 <td>" . $row["name"] . "</td>
                 <td>" . $row["description"] . "</td>
                 <td>" . date("d-m-y", strtotime($row["datefrom"])) . "</td>
                 <td>" . date("d-m-y", strtotime($row["dateto"])) . "</td>
                 <td>" . $row["place"] . "</td>
                 <td>" . $row["time"] . "</td>
+                <td>" . $row["end-time"] . "</td>
                 <td>" . $row["orgby"] . "</td>
+                <td>" . $row["participation_date"] . "</td>
                 <td>" . $row["approval"] . "</td>
             </tr>";
-                } ?>
-            </tbody>
+            } ?>
+        </tbody>
         </table>
 </body>
 
