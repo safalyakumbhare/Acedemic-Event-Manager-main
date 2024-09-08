@@ -1,3 +1,6 @@
+-- Database Name :- `testing`
+
+
 CREATE TABLE IF NOT EXISTS `login`(
     `desig` VARCHAR(10),
     `name` VARCHAR(30),
@@ -98,7 +101,7 @@ INSERT INTO `student` VALUES
 ('Nisha Khole','nishak@gmail.com','9830342949','Commerce and Management','BCCA','1st','38','nisha','Approved');
 
 
-CREATE TABLE IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS `participants`(
     `eventname` VARCHAR(30),
     `studname` VARCHAR(30),
     `studrollno` VARCHAR(10),
@@ -106,6 +109,12 @@ CREATE TABLE IF NOT EXISTS (
     `studbranch` VARCHAR(30),
     `studyear` VARCHAR(5),
     `studemail` VARCHAR(30),
-    `studphone` VARCHAR(10),
+    `studphone` VARCHAR(10)
 );
 
+INSERT INTO `participants` VALUES 
+('Ganesh Idol Making Competition','Rohan Desai','53','Science and Technology','B-Tech','3rd','rohan@gmail.com','9632144560');
+INSERT INTO `participants` VALUES
+('Ganesh Idol Making Competition','Rahul Desai','49','Science and Technology','BCA','2nd','rahul@gmail.com','8050234753');
+INSERT INTO `participants` VALUES
+('Ganesh Idol Making Competition','Nisha Khole','38','Commerce and Management','BCCA','1st','nishak@gmail.com','9830342949');

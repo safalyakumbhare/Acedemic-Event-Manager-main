@@ -59,6 +59,9 @@ $name = $res;
                             <a class="nav-link" aria-current="page" href="student-change-pass.php">Change Password</a>
                         </li>
                         <li class="nav-item h5">
+                            <a class="nav-link" href="student-participated.php">Participated Events</a>
+                        </li>
+                        <li class="nav-item h5">
                             <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                     </ul>
