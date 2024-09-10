@@ -90,9 +90,7 @@ include("header.php")
             <div class="form-group">
                 <label for="activity">Select Event Name:</label>
                 <?php
-                // Display a dropdown with activities
-                $current_date = date('Y-m-d');
-                $sql = "SELECT name FROM activity WHERE `datefrom` >= '$current_date'";
+                $sql = "SELECT name FROM activity ";
                 echo "<select name='activity' required>";
                 echo "<option value=''>Select</option>";
                 foreach ($conn->query($sql) as $row) {

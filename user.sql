@@ -113,8 +113,8 @@ CREATE TABLE IF NOT EXISTS `participants`(
 );
 
 INSERT INTO `participants` VALUES 
-('Ganesh Idol Making Competition','Rohan Desai','53','Science and Technology','B-Tech','3rd','rohan@gmail.com','9632144560');
+('Ganesh Idol Making Competition','Rohan Desai','53','Science and Technology','B-Tech','3rd','rohan@gmail.com','9632144560','participated','2024-09-04');
 INSERT INTO `participants` VALUES
-('Ganesh Idol Making Competition','Rahul Desai','49','Science and Technology','BCA','2nd','rahul@gmail.com','8050234753');
+('Ganesh Idol Making Competition','Rahul Desai','49','Science and Technology','BCA','2nd','rahul@gmail.com','8050234753','participated','2024-09-04');
 INSERT INTO `participants` VALUES
-('Ganesh Idol Making Competition','Nisha Khole','38','Commerce and Management','BCCA','1st','nishak@gmail.com','9830342949');
+('Ganesh Idol Making Competition','Nisha Khole','38','Commerce and Management','BCCA','1st','nishak@gmail.com','9830342949','participated','2024-09-04');

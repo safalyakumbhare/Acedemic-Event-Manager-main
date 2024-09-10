@@ -7,9 +7,6 @@ $sql = "SELECT * FROM `activity` WHERE `datefrom` >= '$current_date' AND `approv
 $res = mysqli_query($conn, $sql);
 
 $num_events = mysqli_num_rows($res);
-// $data = mysqli_fetch_assoc($res);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -47,41 +44,41 @@ $num_events = mysqli_num_rows($res);
 </style>
 
 <body>
-    
-
     <?php
     if ($num_events > 0) {
         while ($data = mysqli_fetch_assoc($res)) {
             $dateFormatted = date('d-m-y', strtotime($data['datefrom']));
             $dateFormatted1 = date('d-m-y', strtotime($data['participation_date']));
             echo '
-    <div class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-8">
-                        <div class="footer_widget">
-                            <div class="address_details text-center">
-                                <h4 class="wow" data-wow-duration="1s" data-wow-delay=".3s">' . $dateFormatted . '</h4>
-                                <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">' . $data['name'] . '</h3>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">' . $data['description'] . '</p>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Organized by : ' . $data['orgby'] . '</p>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Place : ' . $data['place'] . '</p>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Timing :' . $data['time'] . ' To '.$data['end-time'].'</p>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Last date to Participate :' . $dateFormatted1 . '</p>
+            <div class="footer">
+                <div class="footer_top">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="footer_widget">
+                                    <div class="address_details text-center">
+                                        <h4 class="wow" data-wow-duration="1s" data-wow-delay=".3s">' . $dateFormatted . '</h4>
+                                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">' . $data['name'] . '</h3>
+                                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">' . $data['description'] . '</p>
+                                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Organized by : ' . $data['orgby'] . '</p>
+                                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Place : ' . $data['place'] . '</p>
+                                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Timing : ' . $data['time'] . ' To ' . $data['end-time'] . '</p>
+                                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Last date to Participate : ' . $dateFormatted1 . '</p>
 
-                                <a href="student-event-participation.php?event='.$data['name'].'" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Participate</a>
+                                        <a href="student-event-participation.php?event=' . $data['name'] . '" 
+                                           class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" 
+                                           ' . ($data['participation_date'] == '$current_date' ? 'disabled' : '') . '>Participate</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>';
+            </div>';
         }
     }
     ?>
-    </div>
-
+    
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
@@ -105,7 +102,6 @@ $num_events = mysqli_num_rows($res);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
 
     <!--contact js-->
     <script src="js/contact.js"></script>
