@@ -22,7 +22,9 @@ include("header-student.php");
                     </thead>
                     <tbody>
                         <?php
-                        $sql = "SELECT * FROM `participants` WHERE `studname` = '$user'";
+                        $current_date = date('Y-m-d');
+                        
+                        $sql = "SELECT * FROM `participants` WHERE  `date` >= '$current_date' AND `studname` = '$user'";
                         $result = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>
