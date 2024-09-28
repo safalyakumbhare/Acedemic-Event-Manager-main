@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `login`(
     `password` VARCHAR(30)
 );
 
-INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Principle','Safalya Kumbhare','safalyakumbhare@gmail.com','Ghriet','admin', 'admin111');
+INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Principal','Safalya Kumbhare','safalyakumbhare@gmail.com','Ghriet','admin', 'admin111');
 INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Hod','Pravin Paradkar','pravindparadkar2003@gmail.com
 ','Commerce and Management','pravin', 'pravin11');
 INSERT INTO `login` (`desig`,`name`,`email`,`dept`,`username`, `password`) VALUES ('Faculty','Dhananjay',
@@ -109,7 +109,9 @@ CREATE TABLE IF NOT EXISTS `participants`(
     `studbranch` VARCHAR(30),
     `studyear` VARCHAR(5),
     `studemail` VARCHAR(30),
-    `studphone` VARCHAR(10)
+    `studphone` VARCHAR(10),
+    `participate` VARCHAR(100) DEFAULT 'participated',
+    `date` DATE
 );
 
 INSERT INTO `participants` VALUES 
