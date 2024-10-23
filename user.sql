@@ -1,6 +1,5 @@
 -- Database Name :- `testing`
 
-
 CREATE TABLE IF NOT EXISTS `login`(
     `desig` VARCHAR(10),
     `name` VARCHAR(30),
